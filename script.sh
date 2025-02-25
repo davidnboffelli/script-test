@@ -6,4 +6,4 @@
 echo "Hola mundo"
 
 # Guarda el secreto en un archivo
-echo $SECRET_VALUE > archivo.txt
+# echo $SECRET_VALUE > archivo.txt

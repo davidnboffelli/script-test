@@ -18,7 +18,7 @@ resource "null_resource" "regenerate_secret_on_destroy" {
   # Este provisioner se ejecutará *antes* de eliminar los recursos
   lifecycle {
     precondition {
-      condition     = fileexists("path/to/output/file")
+      condition     = fileexists("archivo.txt")
       error_message = "El archivo de secretos no existe antes de ejecutar el destroy."
     }
   }

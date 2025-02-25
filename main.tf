@@ -1,7 +1,7 @@
 provider "external" {}
 
 # Obtenemos el secreto y lo almacenamos en un archivo
-data "external" "get_secret" {
+data "external" "get_message" {
   program = ["bash", "script.sh"]
 }
 
@@ -24,4 +24,10 @@ resource "null_resource" "regenerate_secret_on_destroy" {
   }
   
   # depends_on = [local_file.secret_file]
+}
+
+
+
+output "mensaje" {
+  value = data.external.get_message.result["mensaje"]
 }
